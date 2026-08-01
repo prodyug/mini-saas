@@ -17,3 +17,12 @@ O primeiro cadastro cria automaticamente uma organização e torna o usuário ad
 
 - `npm run dev`: inicia o ambiente local.
 - `npm run build`: gera a versão de produção.
+
+## GitHub Pages
+
+O deploy é automático a cada envio para a branch `main`. Antes do primeiro deploy, no repositório do GitHub abra **Settings > Secrets and variables > Actions** e crie os secrets abaixo com os valores do seu `.env` local:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+
+Em **Settings > Pages**, escolha **GitHub Actions** como fonte de publicação. A aplicação ficará disponível em `https://prodyug.github.io/mini-saas/` após a execução do workflow.
